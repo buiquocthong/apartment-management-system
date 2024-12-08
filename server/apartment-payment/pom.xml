@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>vn.apartment</groupId>
+        <artifactId>apartment-system</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>apartment-payment</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>Apartment Payment</name>
+    <description>Apartment Payment</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>apartment-payment-service</module>
+        <module>apartment-payment-client</module>
+    </modules>
+</project>

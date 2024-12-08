@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="USER_INFO-V1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="USER_INFO"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="USER_INFO">
+            <column name="ID" type="bigint" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_USER_INFO_ID"/>
+            </column>
+            <column name="EMAIL" type="varchar(50)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="FIRST_NAME" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LAST_NAME" type="varchar(50)"/>
+            <column name="MIDDLE_NAME" type="varchar(50)"/>
+            <column name="PREFIX" type="varchar(10)"/>
+            <column name="PHONE_NUMBER" type="varchar(50)"/>
+            <column name="COUNTRY_CODE" type="varchar(3)"/>
+        </createTable>
+
+    </changeSet>
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="USER_INFO_AUD-V1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="USER_INFO_AUD"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="USER_INFO_AUD">
+            <column name="ID" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REV" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REVTYPE" type="tinyint(4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="EMAIL" type="varchar(50)"/>
+            <column name="FIRST_NAME" type="varchar(50)"/>
+            <column name="LAST_NAME" type="varchar(50)"/>
+            <column name="MIDDLE_NAME" type="varchar(50)"/>
+            <column name="PREFIX" type="varchar(10)"/>
+            <column name="PHONE_NUMBER" type="varchar(50)"/>
+            <column name="COUNTRY_CODE" type="varchar(3)"/>
+        </createTable>
+
+        <addForeignKeyConstraint constraintName="FK_USER_INFO_AUD_AUDIT"
+                                 baseColumnNames="REV" baseTableName="USER_INFO_AUD"
+                                 referencedColumnNames="ID" referencedTableName="AUDIT"/>
+
+    </changeSet>
+
+</databaseChangeLog>

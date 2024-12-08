@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="RESOURCE-V1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="RESOURCE"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="RESOURCE">
+            <column name="ID" type="bigint" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_RESOURCE_ID"/>
+            </column>
+            <column name="RESOURCE_ID" type="varchar(255)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="UNQ_RESOURCE_ID"/>
+            </column>
+            <column name="NAME" type="varchar(255)"/>
+            <column name="DESCRIPTION" type="varchar(255)"/>
+            <column name="CREATED_AT" type="timestamp" defaultValueComputed="current_timestamp">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>

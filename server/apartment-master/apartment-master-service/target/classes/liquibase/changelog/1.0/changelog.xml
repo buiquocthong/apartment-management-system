@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <include file="block-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="floor-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="apartment-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="household-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="owner-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="record-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="renter-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="contract-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="service-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="service_detail-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="invoice_setting-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="invoice-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="migration-changelog.xml" relativeToChangelogFile="true"/>
+</databaseChangeLog>

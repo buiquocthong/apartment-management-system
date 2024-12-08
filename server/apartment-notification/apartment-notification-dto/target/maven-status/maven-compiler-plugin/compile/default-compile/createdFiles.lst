@@ -1,0 +1,16 @@
+vn\apartment\notification\dto\template\ResetPwMailTemplate.class
+vn\apartment\notification\dto\template\TemplatePageDTO.class
+vn\apartment\notification\dto\event\MailEvent.class
+vn\apartment\notification\dto\mail\Priority.class
+vn\apartment\notification\dto\template\TemplateDTO.class
+vn\apartment\notification\dto\template\InvoiceMailTemplate.class
+vn\apartment\notification\dto\mail\MailResult.class
+vn\apartment\notification\dto\template\IdentityMailTemplate.class
+vn\apartment\notification\dto\mail\MailDTO.class
+vn\apartment\notification\dto\constant\NotificationAPIs.class
+vn\apartment\notification\dto\mail\SimpleMailPageDTO.class
+vn\apartment\notification\dto\enums\MailStatus.class
+vn\apartment\notification\dto\mail\MailPageDTO.class
+vn\apartment\notification\dto\mail\MailQuery.class
+vn\apartment\notification\dto\template\RemindMailTemplate.class
+vn\apartment\notification\dto\mail\SimpleMailDTO.class

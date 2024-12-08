@@ -1,0 +1,40 @@
+server:
+  port: ${IDENTITY_PORT:8081}
+spring:
+  config:
+    import: "optional:configserver:${CLOUD_CONFIG_URL:http://localhost:8888}"
+  application:
+    name: identity-service
+  messages:
+    encoding: UTF-8
+    basename: i18n/messages
+  banner:
+    location: classpath:/banner.txt
+  jpa:
+    database: mysql
+    open-in-view: false
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  liquibase:
+    change-log: classpath:liquibase/master-changelog.xml
+    database-change-log-table: CHANGELOG
+    database-change-log-lock-table: CHANGELOG_LOCK
+springdoc:
+  api-docs:
+    path: /docs/api
+  swagger-ui:
+    path: /docs/ui
+apartment:
+  identity:
+    jwt:
+      expired-time: 60
+      key-store: classpath:key/keystore.jks
+      key-store-password: apartment
+      key-pair-alias: apartment
+      key-pair-password: apartment
+eureka:
+  client:
+    healthcheck:
+      enabled: false

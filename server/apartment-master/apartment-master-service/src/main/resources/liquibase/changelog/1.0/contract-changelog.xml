@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet author="21110778@student.hcmute.edu.vn" id="CONTRACT-V1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="CONTRACT"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="CONTRACT">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_CONTRACT_ID"/>
+            </column>
+            <column name="CONTRACT_ID" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="UNQ_CONTRACT_ID"/>
+            </column>
+            <column name="START_DATE" type="DATETIME"/>
+            <column name="END_DATE" type="DATETIME"/>
+            <column name="STATUS" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="DATETIME" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="UPDATED_DATE" type="DATETIME" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="IS_DELETED" type="BIT(1)"/>
+            <column name="APARTMENT_FK" type="BIGINT"/>
+            <column name="OWNER_FK" type="BIGINT"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="APARTMENT_FK" baseTableName="CONTRACT"
+                                 constraintName="FK_CONTRACT_APARTMENT"
+                                 referencedColumnNames="ID" referencedTableName="APARTMENT"/>
+        <addForeignKeyConstraint baseColumnNames="OWNER_FK" baseTableName="CONTRACT"
+                                 constraintName="FK_CONTRACT_OWNER"
+                                 referencedColumnNames="ID" referencedTableName="OWNER"/>
+    </changeSet>
+
+</databaseChangeLog>

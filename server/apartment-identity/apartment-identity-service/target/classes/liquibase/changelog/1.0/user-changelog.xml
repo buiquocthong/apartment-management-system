@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="USER-V1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="USER"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="USER">
+            <column name="ID" type="bigint" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_USER_ID"/>
+            </column>
+            <column name="USER_ID" type="varchar(100)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="UNQ_USER_ID"/>
+            </column>
+            <column name="STATUS" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ROLE_FK" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AUTH_FK" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="USER_INFO_FK" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_AT" type="timestamp" defaultValueComputed="current_timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_AT" type="timestamp" defaultValueComputed="current_timestamp">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint constraintName="FK_USER_ROLE"
+                                 baseColumnNames="ROLE_FK" baseTableName="USER"
+                                 referencedColumnNames="ID" referencedTableName="ROLE"/>
+
+        <addForeignKeyConstraint constraintName="FK_USER_AUTH"
+                                 baseColumnNames="AUTH_FK" baseTableName="USER"
+                                 referencedColumnNames="ID" referencedTableName="AUTH"
+                                 onDelete="CASCADE"/>
+
+        <addForeignKeyConstraint constraintName="FK_USER_USERINFO"
+                                 baseColumnNames="USER_INFO_FK" baseTableName="USER"
+                                 referencedColumnNames="ID" referencedTableName="USER_INFO"
+                                 onDelete="CASCADE"/>
+
+    </changeSet>
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="USER_AUD-V1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="USER_AUD"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="USER_AUD">
+            <column name="ID" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REV" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REVTYPE" type="tinyint(4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="USER_ID" type="varchar(100)"/>
+            <column name="STATUS" type="varchar(50)"/>
+            <column name="ROLE_FK" type="bigint"/>
+            <column name="AUTH_FK" type="bigint"/>
+            <column name="USER_INFO_FK" type="bigint"/>
+            <column name="CREATED_AT" type="timestamp"/>
+            <column name="UPDATED_AT" type="timestamp"/>
+        </createTable>
+
+        <addForeignKeyConstraint constraintName="FK_USER_AUD_AUDIT"
+                                 baseColumnNames="REV" baseTableName="USER_AUD"
+                                 referencedColumnNames="ID" referencedTableName="AUDIT"/>
+
+    </changeSet>
+
+</databaseChangeLog>

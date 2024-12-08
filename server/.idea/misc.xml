@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/identity-service/pom.xml" />
+        <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-service/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-config/pom.xml" />
+        <option value="$PROJECT_DIR$/apartment-core/pom.xml" />
+        <option value="$PROJECT_DIR$/apartment-core/apartment-core-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/apartment-task-assignment/pom.xml" />
+        <option value="$PROJECT_DIR$/apartment-task-assignment/apartment-task-assignment-dto/pom.xml" />
+        <option value="$PROJECT_DIR$/apartment-task-assignment/apartment-task-assignment-service/pom.xml" />
+        <option value="$PROJECT_DIR$/apartment-master/pom.xml" />
+        <option value="$PROJECT_DIR$/apartment-master/apartment-master-dto/pom.xml" />
+        <option value="$PROJECT_DIR$/apartment-master/apartment-master-client/pom.xml" />
+        <option value="$PROJECT_DIR$/apartment-payment/pom.xml" />
+        <option value="$PROJECT_DIR$/apartment-payment/apartment-payment-client/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/apartment-task-assignment/pom.xml" />
+        <option value="$PROJECT_DIR$/core-service/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/identity-service/pom.xml" />
+        <option value="$PROJECT_DIR$/notification-service/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>vn.apartment</groupId>
+        <artifactId>apartment-system</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+
+    <artifactId>apartment-core</artifactId>
+    <name>Apartment Core</name>
+    <description>Apartment Core</description>
+    <packaging>pom</packaging>
+    <modules>
+        <module>apartment-core-utils</module>
+        <module>apartment-core-model</module>
+        <module>apartment-core-mvc</module>
+        <module>apartment-core-mongodb</module>
+        <module>apartment-core-redis</module>
+    </modules>
+</project>

@@ -1,0 +1,5 @@
+vn\apartment\core\mongdb\aggregate\AggregationRepository.class
+vn\apartment\core\mongdb\aggregate\CountResult.class
+vn\apartment\core\mongdb\annotation\JaversAuditable.class
+vn\apartment\core\mongdb\audit\JaversConfiguration.class
+vn\apartment\core\mongdb\audit\JaversConfiguration$1.class

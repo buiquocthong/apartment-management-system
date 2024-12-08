@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <include file="audit-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="role-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="resource-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="role_resource-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="auth-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="user_info-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="user-changelog.xml" relativeToChangelogFile="true"/>
+
+    <!-- Migration import default data -->
+    <include file="migration_changelog.xml" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>

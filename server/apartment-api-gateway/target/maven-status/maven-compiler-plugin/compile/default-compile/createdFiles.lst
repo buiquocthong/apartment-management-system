@@ -1,0 +1,10 @@
+vn\apartment\api\gateway\exception\GlobalExceptionHandler.class
+vn\apartment\api\gateway\exception\GlobalExceptionHandler$JsonExceptionHandler.class
+vn\apartment\api\gateway\filter\AuthTokenGatewayFilterFactory$Config.class
+vn\apartment\api\gateway\service\KeyService.class
+vn\apartment\api\gateway\ApiGatewayApplication.class
+vn\apartment\api\gateway\config\WebFluxSecurityConfig.class
+vn\apartment\api\gateway\config\FeignResponseDecoderConfig.class
+vn\apartment\api\gateway\service\KeyService$1.class
+vn\apartment\api\gateway\exception\GlobalExceptionHandler$JsonExceptionHandler$ResponseContext.class
+vn\apartment\api\gateway\filter\AuthTokenGatewayFilterFactory.class

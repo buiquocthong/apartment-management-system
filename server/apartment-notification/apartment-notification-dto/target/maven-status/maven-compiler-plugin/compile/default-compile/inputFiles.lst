@@ -1,0 +1,16 @@
+D:\source\am\am\apartment-notification\apartment-notification-dto\src\main\java\vn\apartment\notification\dto\mail\SimpleMailPageDTO.java
+D:\source\am\am\apartment-notification\apartment-notification-dto\src\main\java\vn\apartment\notification\dto\mail\Priority.java
+D:\source\am\am\apartment-notification\apartment-notification-dto\src\main\java\vn\apartment\notification\dto\mail\MailQuery.java
+D:\source\am\am\apartment-notification\apartment-notification-dto\src\main\java\vn\apartment\notification\dto\enums\MailStatus.java
+D:\source\am\am\apartment-notification\apartment-notification-dto\src\main\java\vn\apartment\notification\dto\event\MailEvent.java
+D:\source\am\am\apartment-notification\apartment-notification-dto\src\main\java\vn\apartment\notification\dto\template\TemplateDTO.java
+D:\source\am\am\apartment-notification\apartment-notification-dto\src\main\java\vn\apartment\notification\dto\template\IdentityMailTemplate.java
+D:\source\am\am\apartment-notification\apartment-notification-dto\src\main\java\vn\apartment\notification\dto\mail\MailDTO.java
+D:\source\am\am\apartment-notification\apartment-notification-dto\src\main\java\vn\apartment\notification\dto\mail\SimpleMailDTO.java
+D:\source\am\am\apartment-notification\apartment-notification-dto\src\main\java\vn\apartment\notification\dto\mail\MailResult.java
+D:\source\am\am\apartment-notification\apartment-notification-dto\src\main\java\vn\apartment\notification\dto\constant\NotificationAPIs.java
+D:\source\am\am\apartment-notification\apartment-notification-dto\src\main\java\vn\apartment\notification\dto\template\RemindMailTemplate.java
+D:\source\am\am\apartment-notification\apartment-notification-dto\src\main\java\vn\apartment\notification\dto\template\ResetPwMailTemplate.java
+D:\source\am\am\apartment-notification\apartment-notification-dto\src\main\java\vn\apartment\notification\dto\template\InvoiceMailTemplate.java
+D:\source\am\am\apartment-notification\apartment-notification-dto\src\main\java\vn\apartment\notification\dto\mail\MailPageDTO.java
+D:\source\am\am\apartment-notification\apartment-notification-dto\src\main\java\vn\apartment\notification\dto\template\TemplatePageDTO.java

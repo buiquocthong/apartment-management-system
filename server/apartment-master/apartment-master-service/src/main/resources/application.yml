@@ -1,0 +1,36 @@
+server:
+  port: ${MASTER_PORT:8083}
+spring:
+  config:
+    import: "optional:configserver:${CLOUD_CONFIG_URL:http://localhost:8888}"
+  application:
+    name: master-service
+  messages:
+    encoding: UTF-8
+    basename: i18n/messages
+  banner:
+    location: classpath:/banner.txt
+  jpa:
+    database: mysql
+    open-in-view: false
+    show-sql: false
+    hibernate:
+      ddl-auto: validate
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  liquibase:
+    change-log: classpath:liquibase/master-changelog.xml
+    database-change-log-table: CHANGELOG
+    database-change-log-lock-table: CHANGELOG_LOCK
+  task:
+    scheduling:
+      pool:
+        size: 2
+springdoc:
+  api-docs:
+    path: /docs/api
+  swagger-ui:
+    path: /docs/ui
+eureka:
+  client:
+    healthcheck:
+      enabled: false

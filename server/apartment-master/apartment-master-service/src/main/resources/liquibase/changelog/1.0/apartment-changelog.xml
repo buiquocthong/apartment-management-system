@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="APARTMENT-V1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="APARTMENT"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="APARTMENT">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_APARTMENT_ID"/>
+            </column>
+            <column name="APARTMENT_ID" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="UNQ_APARTMENT_ID"/>
+            </column>
+            <column name="NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="IS_FURNISHED" type="BIT(1)"/>
+            <column name="AREA" type="DOUBLE"/>
+            <column name="STATUS" type="VARCHAR(20)"/>
+
+            <column name="PURCHASE_PRICE" type="DECIMAL(19, 2)"/>
+            <column name="SALE_DATE" type="DATETIME"/>
+            <column name="NUMBER_OF_BEDROOM" type="INT"/>
+            <column name="NUMBER_OF_BATHROOM" type="INT"/>
+
+            <column name="CREATED_DATE" type="DATETIME" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="UPDATED_DATE" type="DATETIME" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="FLOOR_FK" type="BIGINT"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="FLOOR_FK" baseTableName="APARTMENT"
+                                 constraintName="FK_APARTMENT_FLOOR"
+                                 referencedColumnNames="ID" referencedTableName="FLOOR"/>
+    </changeSet>
+
+</databaseChangeLog>

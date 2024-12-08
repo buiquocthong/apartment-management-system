@@ -1,0 +1,10 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://admin:admin@localhost:8761/eureka}
+apartment:
+  identity:
+    url: http://localhost:8081
+  client:
+    username: internal_api_call
+    password: apartment

@@ -1,0 +1,11 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@discovery:8761/eureka
+
+apartment:
+  identity:
+    url: http://identity:8081
+  client:
+    username: internal_api_call
+    password: apartment

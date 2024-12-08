@@ -1,0 +1,26 @@
+server:
+  port: ${CLOUD_CONFIG_PORT:8888}
+spring:
+  profiles:
+    active: native
+  application:
+    name: cloud-config
+  messages:
+    encoding: UTF-8
+  banner:
+    location: classpath:/banner.txt
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: ${CLOUD_CONFIG_LOCATION:classpath:/shared}
+        bootstrap: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,routes,metrics,info
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_ZONE_URI:http://admin:admin@localhost:8761/eureka}

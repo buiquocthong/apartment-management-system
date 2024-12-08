@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/apartment-api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-cloud-config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-core/apartment-core-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-core/apartment-core-mongodb/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-core/apartment-core-mvc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-core/apartment-core-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-core/apartment-core-utils/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-eureka-discovery/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-identity/apartment-identity-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-identity/apartment-identity-dto/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-identity/apartment-identity-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-identity/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-identity/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-master/apartment-master-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-master/apartment-master-dto/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-master/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-master/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-notification/apartment-notification-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-notification/apartment-notification-dto/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-notification/apartment-notification-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-notification/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-notification/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-payment-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-payment/apartment-payment-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-payment/apartment-payment-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-payment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apartment-payment/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

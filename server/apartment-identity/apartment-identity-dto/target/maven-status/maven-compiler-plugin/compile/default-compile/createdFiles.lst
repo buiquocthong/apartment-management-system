@@ -1,0 +1,13 @@
+vn\apartment\identity\dto\user\UserInfoDTO.class
+vn\apartment\identity\dto\role\RoleResultDTO.class
+vn\apartment\identity\dto\enums\UserStatus.class
+vn\apartment\identity\dto\user\UserPageDTO.class
+vn\apartment\identity\dto\resource\ResourceDTO.class
+vn\apartment\identity\dto\user\UserDTO.class
+vn\apartment\identity\dto\user\UserResultDTO.class
+vn\apartment\identity\dto\constant\IdentityAPIs.class
+vn\apartment\identity\dto\role\SimpleRoleDTO.class
+vn\apartment\identity\dto\role\RoleDTO.class
+vn\apartment\identity\dto\auth\TokenResult.class
+vn\apartment\identity\dto\auth\ResetPassword.class
+vn\apartment\identity\dto\auth\ChangePassword.class

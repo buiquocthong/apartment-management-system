@@ -1,0 +1,45 @@
+server:
+  port: ${API_GATEWAY_PORT:8080}
+spring:
+  config:
+    import: "optional:configserver:${CLOUD_CONFIG_URL:http://localhost:8888}"
+  application:
+    name: api-gateway
+  banner:
+    location: classpath:/banner.txt
+  cloud:
+    gateway:
+      global-cors:
+        cors-configurations:
+          '[/**]':
+            max-age: ${CORS_MAX_AGE:1000}
+            allowed-origins: ${CORS_ORIGINS:*}
+            allowed-methods: ${CORS_METHODS:POST,PUT,DELETE,GET}
+            allowed-headers: ${CORS_HEADERS:Access-Control-Allow-Origin,Origin,Accept,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization}
+      routes:
+        - id: identity-service
+          uri: lb://identity-service
+          predicates:
+            - Path=/identity/**
+          filters:
+            - StripPrefix=1
+            - AuthToken
+        - id: notification-service
+          uri: lb://notification-service
+          predicates:
+            - Path=/notification/**
+          filters:
+            - StripPrefix=1
+            - AuthToken
+        - id: master-service
+          uri: lb://master-service
+          predicates:
+            - Path=/master/**
+          filters:
+            - StripPrefix=1
+            - AuthToken
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

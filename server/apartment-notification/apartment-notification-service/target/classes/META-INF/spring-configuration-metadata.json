@@ -1,0 +1,33 @@
+{
+  "groups": [
+    {
+      "name": "apartment.notification",
+      "type": "vn.apartment.notification.props.NotificationProperties",
+      "sourceType": "vn.apartment.notification.props.NotificationProperties"
+    },
+    {
+      "name": "apartment.notification.email",
+      "type": "vn.apartment.notification.props.NotificationProperties$Email",
+      "sourceType": "vn.apartment.notification.props.NotificationProperties",
+      "sourceMethod": "public vn.apartment.notification.props.NotificationProperties.Email getEmail() "
+    }
+  ],
+  "properties": [
+    {
+      "name": "apartment.notification.email.bcc",
+      "type": "java.util.Set<java.lang.String>",
+      "sourceType": "vn.apartment.notification.props.NotificationProperties$Email"
+    },
+    {
+      "name": "apartment.notification.email.from",
+      "type": "java.lang.String",
+      "sourceType": "vn.apartment.notification.props.NotificationProperties$Email"
+    },
+    {
+      "name": "apartment.notification.email.max-retry-times",
+      "type": "java.lang.Integer",
+      "sourceType": "vn.apartment.notification.props.NotificationProperties$Email"
+    }
+  ],
+  "hints": []
+}

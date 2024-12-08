@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="ROLE_RESOURCE-V1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="ROLE_RESOURCE"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="ROLE_RESOURCE">
+            <column name="ROLE_FK" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RESOURCE_FK" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PERMISSIONS" type="varchar(255)"/>
+        </createTable>
+
+        <addForeignKeyConstraint constraintName="ROLE_RESOURCE_ROLE_FK"
+                                 baseColumnNames="ROLE_FK" baseTableName="ROLE_RESOURCE"
+                                 referencedColumnNames="ID" referencedTableName="ROLE"/>
+
+        <addForeignKeyConstraint constraintName="ROLE_RESOURCE_RESOURCE_FK"
+                                 baseColumnNames="RESOURCE_FK" baseTableName="ROLE_RESOURCE"
+                                 referencedColumnNames="ID" referencedTableName="RESOURCE"/>
+        <addUniqueConstraint
+                columnNames="ROLE_FK, RESOURCE_FK"
+                constraintName="UNQ_ROLE_RESOURCE"
+                tableName="ROLE_RESOURCE"/>
+
+    </changeSet>
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="ROLE_RESOURCE_AUD-V1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="ROLE_RESOURCE_AUD"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="ROLE_RESOURCE_AUD">
+            <column name="ROLE_FK" type="bigint" />
+            <column name="RESOURCE_FK" type="bigint" />
+            <column name="REV" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REVTYPE" type="tinyint(4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PERMISSIONS" type="varchar(255)"/>
+        </createTable>
+
+        <addForeignKeyConstraint constraintName="FK_ROLE_RESOURCE_AUD_AUDIT"
+                                 baseColumnNames="REV" baseTableName="ROLE_RESOURCE_AUD"
+                                 referencedColumnNames="ID" referencedTableName="AUDIT"/>
+    </changeSet>
+
+</databaseChangeLog>

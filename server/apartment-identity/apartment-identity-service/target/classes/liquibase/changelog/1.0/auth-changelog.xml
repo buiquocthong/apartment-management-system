@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="AUTH-V1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="AUTH"/>
+            </not>
+        </preConditions>
+        <createTable tableName="AUTH">
+            <column name="ID" type="bigint" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_AUTH_ID"/>
+            </column>
+            <column name="USERNAME" type="varchar(50)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="UNQ_AUTH_USERNAME"/>
+            </column>
+            <column name="PASSWORD" type="varchar(255)" />
+            <column name="PASSWORD_EXPIRED" type="boolean" defaultValue="false"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="AUTH_AUD-V1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="AUTH_AUD"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="AUTH_AUD">
+            <column name="ID" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REV" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REVTYPE" type="tinyint(4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="USERNAME" type="varchar(50)" />
+            <column name="PASSWORD" type="varchar(255)" />
+            <column name="PASSWORD_EXPIRED" type="boolean"/>
+        </createTable>
+        <addForeignKeyConstraint constraintName="FK_AUTH_AUD_AUDIT"
+                                 baseColumnNames="REV" baseTableName="AUTH_AUD"
+                                 referencedColumnNames="ID" referencedTableName="AUDIT"/>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c9ca03e3-2c9c-4d5d-b01a-fbce02bc75bb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-cloud-config/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-cloud-config/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-cloud-config/src/main/resources/shared/master-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-cloud-config/src/main/resources/shared/master-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-cloud-config/src/main/resources/shared/notification-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-cloud-config/src/main/resources/shared/notification-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-core/apartment-core-mvc/src/main/java/vn/apartment/core/mvc/configure/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-core/apartment-core-mvc/src/main/java/vn/apartment/core/mvc/configure/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-master/apartment-master-dto/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-master/apartment-master-dto/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-master/apartment-master-dto/src/main/java/vn/apartment/master/dto/constant/MasterAPIs.java" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-master/apartment-master-dto/src/main/java/vn/apartment/master/dto/constant/MasterAPIs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-master/apartment-master-dto/src/main/java/vn/apartment/master/dto/servicedetail/AddServiceDetailDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-master/apartment-master-dto/src/main/java/vn/apartment/master/dto/servicedetail/AddServiceDetailDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-master/apartment-master-dto/src/main/java/vn/apartment/master/dto/servicedetail/UpdateServiceDetailDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-master/apartment-master-dto/src/main/java/vn/apartment/master/dto/servicedetail/UpdateServiceDetailDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-master/apartment-master-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-master/apartment-master-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/MasterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/MasterApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/invoice/AddInvoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/invoice/AddInvoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/invoice/CheckExpiredInvoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/invoice/CheckExpiredInvoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/servicedetail/AddServiceDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/servicedetail/AddServiceDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/servicedetail/UpdateServiceDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/servicedetail/UpdateServiceDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/web/api/InvoiceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/web/api/InvoiceApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-master/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-master/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-notification/apartment-notification-service/src/main/java/vn/apartment/notification/service/MailSenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-notification/apartment-notification-service/src/main/java/vn/apartment/notification/service/MailSenderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-notification/apartment-notification-service/src/main/resources/templates/invoice/INVOICE_CREATE_INVOICE_EN.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-notification/apartment-notification-service/src/main/resources/templates/invoice/INVOICE_CREATE_INVOICE_EN.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment-notification/apartment-notification-service/src/main/resources/templates/invoice/INVOICE_REMIND_PAYMENT_EN.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/apartment-notification/apartment-notification-service/src/main/resources/templates/invoice/INVOICE_REMIND_PAYMENT_EN.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker/apartment/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../docker/apartment/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker/apartment/config/master-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker/apartment/config/master-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker/apartment/config/notification-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker/apartment/config/notification-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker/apartment/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker/apartment/docker-compose.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dockerfile" />
+        <option value="com.intellij.jpb.JpaLiquibaseChangeLog" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hoailamcenter&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hoailamcenter/apartment-management.git&quot;,
+    &quot;accountId&quot;: &quot;25fc1923-9a50-414b-9a9f-dc4495366548&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2lEQCIrEBaVg74ARMhWmb1DtK1s" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.am_sys_iden.executor": "Run",
+    "Application.am_sys_noti.executor": "Run",
+    "Application.cloud-config.executor": "Run",
+    "Application.eureka-server.executor": "Run",
+    "Application.gateway.executor": "Run",
+    "Application.identity.executor": "Run",
+    "Application.master.executor": "Run",
+    "Application.notification.executor": "Run",
+    "Application.payment.executor": "Run",
+    "Maven.apartment-system [clean].executor": "Run",
+    "Maven.apartment-system [install].executor": "Run",
+    "Maven.core-service [install].executor": "Run",
+    "Maven.identity-service [clean].executor": "Run",
+    "Maven.identity-service [install].executor": "Run",
+    "Maven.notification-service [clean].executor": "Run",
+    "Maven.notification-service [install].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ApartmentMasterServiceApplication.executor": "Run",
+    "Spring Boot.ApartmentPaymentServiceApplication.executor": "Run",
+    "Spring Boot.CloudConfigApplication.executor": "Run",
+    "Spring Boot.EurekaServerApplication.executor": "Run",
+    "Spring Boot.EurekaServiceApplication.executor": "Run",
+    "Spring Boot.IdentityServiceApplication .executor": "Run",
+    "Spring Boot.NotificationServiceApplication .executor": "Run",
+    "Spring Boot.NotificationServiceApplication.executor": "Run",
+    "com.intellij.ide.FileNotInSourceRootChecker.no.check": "true",
+    "data.sources.detected.do.not.suggest.again": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/source/springboot/blog-microservices",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\source\am\am\apartment-payment\apartment-payment-service" />
+      <recent name="D:\source\am\am\apartment-payment\apartment-payment-client\src\main\java\vn\apartment\payment\client\constant" />
+      <recent name="D:\source\am\am\apartment-payment\apartment-payment-client\src\main\java\dto" />
+      <recent name="D:\source\am\am\apartment-payment-service\src\main\resources" />
+      <recent name="D:\source\am\am\apartment-master\apartment-master-service\src\main\resources\liquibase\changelog\1.0" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\source\am\am\apartment-payment" />
+      <recent name="D:\source\am\am\apartment-notification\apartment-notification-service\src\main\resources\templates\identity" />
+      <recent name="D:\source\am\am\apartment-notification\apartment-notification-service\src\main\resources\templates\password" />
+      <recent name="D:\source\am\am\eureka-service" />
+      <recent name="D:\source\am\am\identity-service\src\main\java\vn\apartment\identity" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="vn.apartment.payment.client" />
+      <recent name="vn.apartment.master" />
+      <recent name="vn.apartment.core.redis" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="vn.apartment.payment.service" />
+      <recent name="vn.apartment.payment.service.paypal" />
+      <recent name="vn.apartment.master.conf" />
+      <recent name="vn.apartment.master" />
+      <recent name="vn.apartment.notification.mapper" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.payment">
+    <configuration name="cloud-config" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="vn.apartment.cloud.config.CloudConfigApplication" />
+      <module name="apartment-cloud-config" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="cloud-config" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="vn.apartment.cloud.config.CloudConfigApplication" />
+      <module name="apartment-cloud-config" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="eureka-server" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="vn.apartment.eurekaservice.EurekaServiceApplication" />
+      <module name="apartment-eureka-discovery" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="eureka-server" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="vn.apartment.eurekaservice.EurekaServiceApplication" />
+      <module name="apartment-eureka-discovery" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="gateway" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="vn.apartment.api.gateway.ApiGatewayApplication" />
+      <module name="apartment-api-gateway" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="gateway" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="vn.apartment.api.gateway.ApiGatewayApplication" />
+      <module name="apartment-api-gateway" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="identity" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="vn.apartment.identity.IdentityApplication" />
+      <module name="apartment-identity-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="identity" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="vn.apartment.identity.IdentityApplication" />
+      <module name="apartment-identity-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="master" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="vn.apartment.master.MasterApplication" />
+      <module name="apartment-master-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="master" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="vn.apartment.master.MasterApplication" />
+      <module name="apartment-master-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="notification" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="vn.apartment.notification.NotificationApplication" />
+      <module name="apartment-notification-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="notification" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="vn.apartment.notification.NotificationApplication" />
+      <module name="apartment-notification-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="payment" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="vn.apartment.payment.service.PaymentApplication" />
+      <module name="apartment-payment-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="apartment-api-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vn.apartment.api.gateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="CloudConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="apartment-cloud-config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vn.apartment.cloud.config.CloudConfigApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="apartment-eureka-discovery" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vn.apartment.eurekaservice.EurekaServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="IdentityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="apartment-identity-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vn.apartment.identity.IdentityApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="MasterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="apartment-master-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vn.apartment.master.MasterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="NotificationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="apartment-notification-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vn.apartment.notification.NotificationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="PaymentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="apartment-payment-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vn.apartment.payment.service.PaymentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.payment" />
+      <item itemvalue="Application.cloud-config" />
+      <item itemvalue="Application.eureka-server" />
+      <item itemvalue="Application.gateway" />
+      <item itemvalue="Application.identity" />
+      <item itemvalue="Application.master" />
+      <item itemvalue="Application.notification" />
+      <item itemvalue="Spring Boot.PaymentApplication" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.CloudConfigApplication" />
+      <item itemvalue="Spring Boot.EurekaServiceApplication" />
+      <item itemvalue="Spring Boot.IdentityApplication" />
+      <item itemvalue="Spring Boot.MasterApplication" />
+      <item itemvalue="Spring Boot.NotificationApplication" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.387" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.387" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c9ca03e3-2c9c-4d5d-b01a-fbce02bc75bb" name="Changes" comment="" />
+      <created>1724742626917</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724742626917</updated>
+      <workItem from="1724742628347" duration="109000" />
+      <workItem from="1724742837360" duration="2540000" />
+      <workItem from="1724745483410" duration="1309000" />
+      <workItem from="1724772176157" duration="10605000" />
+      <workItem from="1724825486151" duration="11759000" />
+      <workItem from="1724911729717" duration="5654000" />
+      <workItem from="1724938111828" duration="14528000" />
+      <workItem from="1725011683125" duration="3285000" />
+      <workItem from="1725038826708" duration="4415000" />
+      <workItem from="1725177251251" duration="12720000" />
+      <workItem from="1725242855383" duration="2125000" />
+      <workItem from="1725281329462" duration="1144000" />
+      <workItem from="1725335327121" duration="13664000" />
+      <workItem from="1725369725892" duration="7551000" />
+      <workItem from="1725417250830" duration="6101000" />
+      <workItem from="1725428031550" duration="1990000" />
+      <workItem from="1725454553441" duration="15626000" />
+      <workItem from="1725533329435" duration="5795000" />
+      <workItem from="1725543798081" duration="4312000" />
+      <workItem from="1725552622039" duration="654000" />
+      <workItem from="1725584694197" duration="7448000" />
+      <workItem from="1725600840662" duration="672000" />
+      <workItem from="1725688691367" duration="127000" />
+      <workItem from="1725879643734" duration="3905000" />
+      <workItem from="1725901439961" duration="10712000" />
+      <workItem from="1725937071820" duration="10583000" />
+      <workItem from="1725950398725" duration="405000" />
+      <workItem from="1726059671593" duration="6336000" />
+      <workItem from="1726124346887" duration="12723000" />
+      <workItem from="1726138259048" duration="4015000" />
+      <workItem from="1726286431909" duration="3996000" />
+      <workItem from="1726293614160" duration="5628000" />
+      <workItem from="1726324750925" duration="12905000" />
+      <workItem from="1726367074651" duration="7488000" />
+      <workItem from="1726412802971" duration="849000" />
+      <workItem from="1726454651269" duration="519000" />
+      <workItem from="1726505613969" duration="4706000" />
+      <workItem from="1726563559946" duration="27000" />
+      <workItem from="1726566887592" duration="1238000" />
+      <workItem from="1726573394410" duration="679000" />
+      <workItem from="1726625866442" duration="5057000" />
+      <workItem from="1726632123412" duration="928000" />
+      <workItem from="1726801461829" duration="696000" />
+      <workItem from="1726805872487" duration="404000" />
+      <workItem from="1726816394723" duration="2348000" />
+      <workItem from="1726977835556" duration="2650000" />
+      <workItem from="1726987592069" duration="720000" />
+      <workItem from="1726999355582" duration="590000" />
+      <workItem from="1727000036904" duration="91000" />
+      <workItem from="1727063824943" duration="8685000" />
+      <workItem from="1727165642791" duration="801000" />
+      <workItem from="1727278884379" duration="1720000" />
+      <workItem from="1727411477078" duration="1241000" />
+      <workItem from="1727412743670" duration="70000" />
+      <workItem from="1727423642063" duration="1730000" />
+      <workItem from="1727454143043" duration="1718000" />
+      <workItem from="1727492250886" duration="4409000" />
+      <workItem from="1727581314824" duration="860000" />
+      <workItem from="1727582313460" duration="3413000" />
+      <workItem from="1727676416774" duration="1773000" />
+      <workItem from="1727699687979" duration="2476000" />
+      <workItem from="1727746256629" duration="5039000" />
+      <workItem from="1727773379816" duration="8946000" />
+      <workItem from="1727793777624" duration="39511000" />
+      <workItem from="1727917243965" duration="2029000" />
+      <workItem from="1727923113566" duration="2588000" />
+      <workItem from="1727940793458" duration="11209000" />
+      <workItem from="1728005863811" duration="3975000" />
+      <workItem from="1728023441519" duration="16407000" />
+      <workItem from="1728104343574" duration="10477000" />
+      <workItem from="1728185927321" duration="13806000" />
+      <workItem from="1728265868049" duration="3546000" />
+      <workItem from="1728285064119" duration="27154000" />
+      <workItem from="1728319498594" duration="1328000" />
+      <workItem from="1728391860940" duration="8800000" />
+      <workItem from="1728441541205" duration="22678000" />
+      <workItem from="1728524080884" duration="11998000" />
+      <workItem from="1728582228428" duration="4079000" />
+      <workItem from="1728618341828" duration="10497000" />
+      <workItem from="1728634452153" duration="2428000" />
+      <workItem from="1728651421279" duration="14827000" />
+      <workItem from="1728698712748" duration="2655000" />
+      <workItem from="1728786024065" duration="5221000" />
+      <workItem from="1728795223721" duration="13606000" />
+      <workItem from="1728875638680" duration="1026000" />
+      <workItem from="1728894332559" duration="23146000" />
+      <workItem from="1728952202188" duration="7591000" />
+      <workItem from="1728980747041" duration="5504000" />
+      <workItem from="1729009534989" duration="6443000" />
+      <workItem from="1729046746018" duration="5924000" />
+      <workItem from="1729059574895" duration="131000" />
+      <workItem from="1729070743250" duration="9156000" />
+      <workItem from="1729131922162" duration="7962000" />
+      <workItem from="1729155458489" duration="9606000" />
+      <workItem from="1729185838288" duration="3399000" />
+      <workItem from="1729220406709" duration="7515000" />
+      <workItem from="1729233780033" duration="7725000" />
+      <workItem from="1729251580061" duration="9241000" />
+      <workItem from="1729313208287" duration="449000" />
+      <workItem from="1729349569593" duration="8410000" />
+      <workItem from="1729398489716" duration="4752000" />
+      <workItem from="1729427777018" duration="560000" />
+      <workItem from="1729474855565" duration="2264000" />
+      <workItem from="1729492451671" duration="15338000" />
+      <workItem from="1729562882481" duration="7123000" />
+      <workItem from="1729585772678" duration="7646000" />
+      <workItem from="1729620787760" duration="15969000" />
+      <workItem from="1729657991888" duration="14476000" />
+      <workItem from="1729672935045" duration="902000" />
+      <workItem from="1729738547819" duration="1934000" />
+      <workItem from="1729758863360" duration="7439000" />
+      <workItem from="1729843396706" duration="3537000" />
+      <workItem from="1729914407522" duration="12298000" />
+      <workItem from="1730000404623" duration="10675000" />
+      <workItem from="1730087446308" duration="29933000" />
+      <workItem from="1730134478952" duration="3608000" />
+      <workItem from="1730172561958" duration="9663000" />
+      <workItem from="1730197569407" duration="111000" />
+      <workItem from="1730197705254" duration="17000" />
+      <workItem from="1730197744033" duration="315000" />
+      <workItem from="1730198081938" duration="1446000" />
+      <workItem from="1730199862769" duration="584000" />
+      <workItem from="1730273616689" duration="6721000" />
+      <workItem from="1730297385551" duration="4293000" />
+      <workItem from="1730480992565" duration="1369000" />
+      <workItem from="1730644165704" duration="1136000" />
+      <workItem from="1730646325176" duration="8087000" />
+      <workItem from="1730706104229" duration="7227000" />
+      <workItem from="1730793599109" duration="21534000" />
+      <workItem from="1730825596009" duration="2706000" />
+      <workItem from="1730859031900" duration="6485000" />
+      <workItem from="1730911964613" duration="936000" />
+      <workItem from="1730947296623" duration="5897000" />
+      <workItem from="1731051195933" duration="1713000" />
+      <workItem from="1731136606848" duration="6039000" />
+      <workItem from="1731171470713" duration="1077000" />
+      <workItem from="1731211461043" duration="1046000" />
+      <workItem from="1731295318091" duration="58000" />
+      <workItem from="1731296326804" duration="1300000" />
+      <workItem from="1731311849816" duration="1605000" />
+      <workItem from="1731326637697" duration="1150000" />
+      <workItem from="1731376557082" duration="1336000" />
+      <workItem from="1731419296960" duration="9069000" />
+      <workItem from="1731488265678" duration="21679000" />
+      <workItem from="1731549362123" duration="2483000" />
+      <workItem from="1731572973956" duration="1139000" />
+      <workItem from="1731605789295" duration="2369000" />
+      <workItem from="1731644384924" duration="21000" />
+      <workItem from="1731672298164" duration="8879000" />
+      <workItem from="1731689714454" duration="42000" />
+      <workItem from="1731728893227" duration="4553000" />
+      <workItem from="1731779764235" duration="357000" />
+      <workItem from="1731816323391" duration="868000" />
+      <workItem from="1731862617242" duration="1025000" />
+      <workItem from="1731894708306" duration="5831000" />
+      <workItem from="1731901934470" duration="1036000" />
+      <workItem from="1731933986631" duration="7429000" />
+      <workItem from="1731945434938" duration="1623000" />
+      <workItem from="1732084543529" duration="13764000" />
+      <workItem from="1732176475156" duration="3764000" />
+      <workItem from="1732194436588" duration="575000" />
+      <workItem from="1732237860149" duration="2157000" />
+      <workItem from="1732244699913" duration="6345000" />
+      <workItem from="1732254115899" duration="6016000" />
+      <workItem from="1732262983047" duration="998000" />
+      <workItem from="1732276214874" duration="3557000" />
+      <workItem from="1732279922476" duration="28000" />
+      <workItem from="1732329869065" duration="3494000" />
+      <workItem from="1732501735412" duration="1464000" />
+      <workItem from="1732504019816" duration="1634000" />
+      <workItem from="1732589226681" duration="3441000" />
+      <workItem from="1732870844172" duration="48000" />
+      <workItem from="1732891069057" duration="26000" />
+      <workItem from="1732949047579" duration="12720000" />
+      <workItem from="1733126412801" duration="58000" />
+      <workItem from="1733301708521" duration="3825000" />
+      <workItem from="1733313871580" duration="8835000" />
+      <workItem from="1733324403293" duration="8566000" />
+      <workItem from="1733366445291" duration="3764000" />
+      <workItem from="1733389025871" duration="11323000" />
+      <workItem from="1733402512485" duration="8558000" />
+      <workItem from="1733411252446" duration="302000" />
+      <workItem from="1733491441665" duration="2732000" />
+      <workItem from="1733494241236" duration="111000" />
+      <workItem from="1733494375171" duration="1143000" />
+      <workItem from="1733495581344" duration="8595000" />
+      <workItem from="1733559533742" duration="146000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.exception.ConstraintViolationException" package="org.hibernate.exception" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.LazyInitializationException" package="org.hibernate" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/servicedetail/AddServiceDetail.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/servicedetail/AddServiceDetail.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/servicedetail/AddServiceDetail.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/servicedetail/AddServiceDetail.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/servicedetail/AddServiceDetail.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/servicedetail/AddServiceDetail.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/servicedetail/AddServiceDetail.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/servicedetail/AddServiceDetail.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/servicedetail/AddServiceDetail.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/servicedetail/AddServiceDetail.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/servicedetail/AddServiceDetail.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/servicedetail/AddServiceDetail.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/apartment-master/apartment-master-service/src/main/java/vn/apartment/master/interactor/servicedetail/AddServiceDetail.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

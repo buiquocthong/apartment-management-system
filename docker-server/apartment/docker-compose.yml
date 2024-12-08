@@ -1,0 +1,112 @@
+version: "3.9"
+services:
+
+  discovery:
+    image: ${EUREKA_DISCOVERY_TAG}:${VERSION}
+    container_name: discovery
+    ports:
+      - ${EUREKA_DISCOVERY_PORT}:${EUREKA_DISCOVERY_PORT}
+    environment:
+      - EUREKA_PORT=${EUREKA_DISCOVERY_PORT}
+    healthcheck:
+      test: [ "CMD", "curl", "-I", "${EUREKA_DISCOVERY_URL}" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - shared_env_net
+      
+  config:
+    image: ${ClOUD_CONFIG_TAG}:${VERSION}
+    container_name: config
+    ports:
+      - ${CLOUD_CONFIG_PORT}:${CLOUD_CONFIG_PORT}
+    environment:
+      - CLOUD_CONFIG_PORT=${CLOUD_CONFIG_PORT}
+      - CLOUD_CONFIG_LOCATION=/config
+      - EUREKA_ZONE_URI=${EUREKA_ZONE_URI}
+    volumes:
+      - ./config/:/config
+    depends_on:
+      discovery:
+        condition: service_healthy
+    healthcheck:
+      test: [ "CMD", "curl", "-I", "${CLOUD_CONFIG_URL}" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - shared_env_net
+
+  gateway:
+    image: ${API_GATEWAY_TAG}:${VERSION}
+    container_name: gateway
+    ports:
+      - ${API_GATEWAY_PORT}:${API_GATEWAY_PORT}
+    environment:
+      - API_GATEWAY_PORT=${API_GATEWAY_PORT}
+      - CLOUD_CONFIG_URL=${CLOUD_CONFIG_URL}
+    depends_on:
+      config:
+        condition: service_healthy
+    networks:
+      - shared_env_net
+
+  notification:
+    image: ${NOTIFICATION_TAG}:${VERSION}
+    container_name: notification
+    ports:
+      - ${NOTIFICATION_PORT}:${NOTIFICATION_PORT}
+    environment:
+      - NOTIFICATION_PORT=${NOTIFICATION_PORT}
+      - CLOUD_CONFIG_URL=${CLOUD_CONFIG_URL}
+    depends_on:
+      config:
+        condition: service_healthy
+    networks:
+      - shared_env_net
+
+  identity:
+    image: ${IDENTITY_TAG}:${VERSION}
+    container_name: identity
+    ports:
+      - ${IDENTITY_PORT}:${IDENTITY_PORT}
+    environment:
+      - IDENTITY_PORT=${IDENTITY_PORT}
+      - CLOUD_CONFIG_URL=${CLOUD_CONFIG_URL}
+    depends_on:
+      config:
+        condition: service_healthy
+    networks:
+      - shared_env_net
+  master:
+    image: ${MASTER_TAG}:${VERSION}
+    container_name: master
+    ports:
+      - ${MASTER_PORT}:${MASTER_PORT}
+    environment:
+      - MASTER_PORT=${MASTER_PORT}
+      - CLOUD_CONFIG_URL=${CLOUD_CONFIG_URL}
+    depends_on:
+      config:
+        condition: service_healthy
+    networks:
+      - shared_env_net
+      
+  payment:
+    image: ${PAYMENT_TAG}:${VERSION}
+    container_name: payment
+    ports:
+      - ${PAYMENT_PORT}:${PAYMENT_PORT}
+    environment:
+      - PAYMENT_PORT=${PAYMENT_PORT}
+      - CLOUD_CONFIG_URL=${CLOUD_CONFIG_URL}
+    depends_on:
+      config:
+        condition: service_healthy
+    networks:
+      - shared_env_net
+      
+networks:
+  shared_env_net:
+    external: true

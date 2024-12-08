@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="apartment-identity-dto" />
+        <module name="apartment-api-gateway" />
+        <module name="apartment-identity-client" />
+        <module name="apartment-payment-client" />
+        <module name="apartment-core-model" />
+        <module name="apartment-eureka-discovery" />
+        <module name="apartment-notification-service" />
+        <module name="apartment-core-utils" />
+        <module name="apartment-core-redis" />
+        <module name="apartment-master-client" />
+        <module name="apartment-cloud-config" />
+        <module name="apartment-core-mongodb" />
+        <module name="apartment-notification-dto" />
+        <module name="apartment-notification-client" />
+        <module name="apartment-core-mvc" />
+        <module name="apartment-payment-service" />
+        <module name="apartment-master-dto" />
+      </profile>
+      <profile name="Annotation profile for Apartment System" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.4.2.Final/mapstruct-processor-1.4.2.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.18/lombok-1.18.18.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.4.2.Final/mapstruct-processor-1.4.2.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.18/lombok-1.18.18.jar" />
+        </processorPath>
+        <module name="apartment-master-service" />
+        <module name="apartment-identity-service" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="apartment-api-gateway" options="-parameters" />
+      <module name="apartment-cloud-config" options="-parameters" />
+      <module name="apartment-core-model" options="-parameters" />
+      <module name="apartment-core-mongodb" options="-parameters" />
+      <module name="apartment-core-mvc" options="-parameters" />
+      <module name="apartment-core-redis" options="-parameters" />
+      <module name="apartment-core-utils" options="-parameters" />
+      <module name="apartment-eureka-discovery" options="-parameters" />
+      <module name="apartment-identity-client" options="-parameters" />
+      <module name="apartment-identity-dto" options="-parameters" />
+      <module name="apartment-identity-service" options="-parameters" />
+      <module name="apartment-master-client" options="-parameters" />
+      <module name="apartment-master-dto" options="-parameters" />
+      <module name="apartment-master-service" options="-parameters" />
+      <module name="apartment-notification-client" options="-parameters" />
+      <module name="apartment-notification-dto" options="-parameters" />
+      <module name="apartment-notification-service" options="-parameters" />
+      <module name="apartment-payment" options="" />
+      <module name="apartment-payment-client" options="-parameters" />
+      <module name="apartment-payment-service" options="-parameters" />
+    </option>
+  </component>
+</project>

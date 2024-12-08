@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="AUDIT-V1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="AUDIT"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="AUDIT">
+            <column name="ID" type="bigint" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="AUDIT_ID"/>
+            </column>
+            <column name="TIMESTAMP" type="timestamp" defaultValueComputed="current_timestamp">
+                <constraints nullable="false" />
+            </column>
+            <column name="EDITOR" type="json">
+                <constraints nullable="false" />
+            </column>
+            <column name="ACTION" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="COMMENTS" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>

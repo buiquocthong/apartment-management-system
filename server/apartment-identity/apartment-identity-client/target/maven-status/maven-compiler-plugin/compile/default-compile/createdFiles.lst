@@ -1,0 +1,3 @@
+vn\apartment\identity\client\ClientConfiguration.class
+vn\apartment\identity\client\auth\AuthClient.class
+vn\apartment\identity\client\auth\KeyClient.class

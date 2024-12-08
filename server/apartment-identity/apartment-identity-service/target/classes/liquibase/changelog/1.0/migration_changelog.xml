@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="audit.comments" value="Import the initially records" dbms="mysql"/>
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="AUDIT_MIGRATION-V1">
+
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">select count(*) from AUDIT where COMMENTS = '${audit.comments}'</sqlCheck>
+        </preConditions>
+
+        <sql dbms="mysql" stripComments="true">
+            insert into AUDIT (EDITOR, ACTION, COMMENTS)
+            values ('{"id":"apartment_system","email":"","name":"System"}', 'MIGRATION', '${audit.comments}')
+        </sql>
+
+    </changeSet>
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="ROLE_MIGRATION_V1">
+
+        <preConditions onFail="MARK_RAN">
+            <rowCount tableName="ROLE" expectedRows="0"/>
+        </preConditions>
+
+        <sql dbms="mysql" stripComments="true">
+            insert into ROLE (ID, ROLE_ID, LABEL, DESCRIPTION)
+            values (1, 'c77b3499-b803-407f-be17-64d8f5cd01c0', 'Administrator', '')
+                 ,(2, '326a8808-d312-11eb-b8bc-0242ac130003', 'API CALL', 'Usage for internal service communication only')
+            ;
+        </sql>
+
+        <sql dbms="mysql" stripComments="true">
+            insert into ROLE_AUD (ID, REV, REVTYPE, ROLE_ID, LABEL, DESCRIPTION, CREATED_AT, UPDATED_AT)
+            select
+                ID, (SELECT ID FROM AUDIT WHERE COMMENTS = '${audit.comments}') AS 'REV', '0' AS REVTYPE,
+                ROLE_ID, LABEL, DESCRIPTION,CREATED_AT,UPDATED_AT
+            from ROLE where 1 = 1;
+        </sql>
+
+    </changeSet>
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="USER_INFO_MIGRATION_V1">
+
+        <preConditions onFail="MARK_RAN">
+            <rowCount tableName="USER_INFO" expectedRows="0"/>
+        </preConditions>
+
+        <sql dbms="mysql" stripComments="true">
+            insert into USER_INFO (ID, EMAIL, FIRST_NAME, LAST_NAME, MIDDLE_NAME, PREFIX, PHONE_NUMBER, COUNTRY_CODE)
+            values (1, '21110778@student.hcmute.edu.vn', 'Admin', '', '', '', '', 'VN')
+                 ,(2, 'internal_api_call', 'API/REST', 'Internal', '', '', '', 'VN');
+            ;
+        </sql>
+
+        <sql dbms="mysql" stripComments="true">
+            insert into USER_INFO_AUD (ID, REV, REVTYPE, EMAIL, FIRST_NAME, LAST_NAME, MIDDLE_NAME, PREFIX,
+                                       PHONE_NUMBER, COUNTRY_CODE)
+            select
+                ID, (SELECT ID FROM AUDIT WHERE COMMENTS = '${audit.comments}') AS 'REV', '0' AS REVTYPE,
+                EMAIL, FIRST_NAME, LAST_NAME, MIDDLE_NAME, PREFIX, PHONE_NUMBER, COUNTRY_CODE
+            from USER_INFO where 1 = 1;
+        </sql>
+
+    </changeSet>
+
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="AUTH_MIGRATION_V1">
+
+        <preConditions onFail="MARK_RAN">
+            <rowCount tableName="AUTH" expectedRows="0"/>
+        </preConditions>
+
+        <sql dbms="mysql" stripComments="true">
+            insert into AUTH (ID, USERNAME, PASSWORD, PASSWORD_EXPIRED)
+            values (1, 'apartment', '$2a$10$TCT.RVY.5KD1SWDcFPrl/eOGc8zgF7L5v5SULV9KdVt/lbC2Uo.Sm', 0)
+                 ,(2, 'internal_api_call', '$2a$10$TCT.RVY.5KD1SWDcFPrl/eOGc8zgF7L5v5SULV9KdVt/lbC2Uo.Sm', 0)
+            ;
+        </sql>
+
+        <sql dbms="mysql" stripComments="true">
+            insert into AUTH_AUD (ID, REV, REVTYPE, USERNAME, PASSWORD, PASSWORD_EXPIRED)
+            select
+                ID, (SELECT ID FROM AUDIT WHERE COMMENTS = '${audit.comments}') AS 'REV', '0' AS REVTYPE,
+                USERNAME, PASSWORD, PASSWORD_EXPIRED
+            from AUTH where 1 = 1;
+        </sql>
+
+    </changeSet>
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="USER_MIGRATION_V1">
+
+        <preConditions onFail="MARK_RAN">
+            <rowCount tableName="USER" expectedRows="0"/>
+        </preConditions>
+
+        <sql dbms="mysql" stripComments="true">
+            insert into USER (ID, USER_ID, STATUS, ROLE_FK, AUTH_FK, USER_INFO_FK)
+            values (1, '6d90dfb6-bc3a-11eb-8529-0242ac130003', 'ACTIVE', 1, 1, 1)
+                 ,(2, '753596f0-d312-11eb-b8bc-0242ac130003', 'ACTIVE', 1, 2, 2)
+            ;
+        </sql>
+
+        <sql dbms="mysql" stripComments="true">
+            insert into USER_AUD (ID, REV, REVTYPE, USER_ID, STATUS, ROLE_FK, AUTH_FK, USER_INFO_FK, CREATED_AT, UPDATED_AT)
+            select
+                ID, (SELECT ID FROM AUDIT WHERE COMMENTS = '${audit.comments}') AS 'REV', '0' AS REVTYPE,
+                USER_ID, STATUS, ROLE_FK, AUTH_FK, USER_INFO_FK, CREATED_AT, UPDATED_AT
+            from USER where 1 = 1;
+        </sql>
+
+    </changeSet>
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="RESOURCE_MIGRATION_V1">
+
+        <preConditions onFail="MARK_RAN">
+            <rowCount tableName="RESOURCE" expectedRows="0"/>
+        </preConditions>
+
+        <sql dbms="mysql" stripComments="true">
+            insert into RESOURCE (ID, RESOURCE_ID, NAME, DESCRIPTION)
+            values
+            (1, 'DASHBOARD', 'Dashboard', 'Dashboard Resource')
+            ,(2, 'USER', 'User', 'User Resource')
+            ,(3, 'ROLE', 'Role', 'Role Resource')
+            ,(4, 'APARTMENT', 'Apartment', 'Apartment Resource')
+            ,(5, 'NOTIFICATION_MAIL', 'Mail', 'Mail Resource')
+            ,(6, 'BLOCK', 'Block', 'Block Resource')
+            ,(7, 'OWNER', 'Owner', 'Owner Resource')
+            ,(8, 'CONTRACT', 'Contract', 'Contract Resource')
+            ,(9, 'SERVICE', 'Service', 'Service Resource')
+            ,(10, 'INVOICE', 'Invoice', 'Invoice Resource')
+            ,(11, 'HOUSEHOLD', 'Household', 'Household Resource')
+            ,(12, 'SERVICE_DETAIL', 'Service Detail', 'Service Detail Resource')
+            ,(13, 'FLOOR', 'Floor', 'Floor Resource')
+            ,(14, 'RECORD', 'Record', 'Record Resource')
+            ,(15, 'RENTER', 'Renter', 'Renter Resource');
+        </sql>
+
+    </changeSet>
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="ROLE_RESOURCE_MIGRATION_V1">
+
+        <preConditions onFail="MARK_RAN">
+            <rowCount tableName="ROLE_RESOURCE" expectedRows="0"/>
+        </preConditions>
+
+        <sql dbms="mysql" stripComments="true">
+            insert into ROLE_RESOURCE (ROLE_FK, RESOURCE_FK, PERMISSIONS)
+            values
+            (1, 1, '*')
+            ,(1, 2, '*')
+            ,(1, 3, '*')
+            ,(1, 4, '*')
+            ,(1, 5, '*')
+            ,(1, 6, '*')
+            ,(1, 7, '*')
+            ,(1, 8, '*')
+            ,(1, 9, '*')
+            ,(1, 10, '*')
+            ,(1, 11, '*')
+            ,(1, 12, '*')
+            ,(1, 13, '*')
+            ,(1, 14, '*')
+            ,(1, 15, '*');
+        </sql>
+
+        <sql dbms="mysql" stripComments="true">
+            insert into ROLE_RESOURCE_AUD (ROLE_FK, RESOURCE_FK, REV, REVTYPE, PERMISSIONS)
+            select
+                ROLE_FK, RESOURCE_FK
+                    ,(SELECT ID FROM AUDIT WHERE COMMENTS = '${audit.comments}') AS 'REV', '0' AS REVTYPE,
+                PERMISSIONS
+            from ROLE_RESOURCE;
+        </sql>
+
+    </changeSet>
+
+</databaseChangeLog>

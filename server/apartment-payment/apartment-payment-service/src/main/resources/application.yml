@@ -1,0 +1,13 @@
+server:
+  port: ${PAYMENT_PORT:8084}
+spring:
+  config:
+    import: "optional:configserver:${CLOUD_CONFIG_URL:http://localhost:8888}"
+  application:
+    name: payment-service
+  banner:
+    location: classpath:/banner.txt
+paypal:
+  client-id: AewByxMfZbR9fq6k7OgsVxRen0ivhLXmxhirmZe0dkG6p6RM02Eoy1bsCtSEQGl_MlrGxAs1KIVs0a3k
+  client-secret: EIEgSKtu4evDNMaLc44x3sMkiRcmtgstcIkM4LCrD7euPfqGaCujgLy3uqn0D-emd-f7OHa0UIbyvxvw
+  mode: sandbox

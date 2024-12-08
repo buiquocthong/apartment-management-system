@@ -1,0 +1,21 @@
+server:
+  port: ${EUREKA_PORT:8761}
+spring:
+  application:
+    name: eureka-service
+  messages:
+    encoding: UTF-8
+  banner:
+    location: classpath:/banner.txt
+  security:
+    user:
+      name: ${EUREKA_USER:admin}
+      password: ${EUREKA_PW:admin}
+eureka:
+  instance:
+    hostname: ${EUREKA_HOSTNAME:localhost}
+  client:
+    registerWithEureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: ${EUREKA_ZONE_URI:http://localhost:8761/eureka}

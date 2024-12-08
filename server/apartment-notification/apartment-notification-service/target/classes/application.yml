@@ -1,0 +1,23 @@
+server:
+  port: ${NOTIFICATION_PORT:8082}
+spring:
+  config:
+    import: "optional:configserver:${CLOUD_CONFIG_URL:http://localhost:8888}"
+  application:
+    name: notification-service
+  banner:
+    location: classpath:/banner.txt
+  quartz:
+    job-store-type: memory
+    properties:
+      org.quartz.scheduler.instanceName: notification-quartz
+      org.quartz.threadPool.threadCount: 20
+      org.quartz.jobStore.class: org.quartz.simpl.RAMJobStore
+mongock:
+  change-logs-scan-package:
+    - vn.apartment.notification.changelog
+springdoc:
+  api-docs:
+    path: /docs/api
+  swagger-ui:
+    path: /docs/ui

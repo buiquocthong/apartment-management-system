@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="INVOICE-V1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="INVOICE"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="INVOICE">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_INVOICE_ID"/>
+            </column>
+            <column name="INVOICE_ID" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="UNQ_INVOICE_ID"/>
+            </column>
+            <column name="PAYMENT_DEADLINE" type="DATETIME"/>
+            <column name="EXTRA_PAYMENT_DEADLINE" type="DATETIME"/>
+            <column name="PENALTY_FEE" type="DECIMAL(19, 2)"/>
+            <column name="STATUS" type="VARCHAR(255)"/>
+            <column name="TOTAL" type="DECIMAL(19, 2)"/>
+            <column name="IS_DELETED" type="BIT(1)"/>
+            <column name="CREATED_DATE" type="DATETIME" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="UPDATED_DATE" type="DATETIME" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="APARTMENT_FK" type="BIGINT"/>
+            <column name="INVOICE_SETTING_FK" type="BIGINT"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="APARTMENT_FK" baseTableName="INVOICE"
+                                 constraintName="FK_INVOICE_APARTMENT"
+                                 referencedColumnNames="ID" referencedTableName="APARTMENT" validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="INVOICE_SETTING_FK" baseTableName="INVOICE"
+                                 constraintName="FK_INVOICE_INVOICE_SETTING"
+                                 referencedColumnNames="ID" referencedTableName="INVOICE_SETTING" validate="true"/>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet author="21110778@student.hcmute.edu.vn" id="RECORD-V1">
+        <createTable tableName="RECORD">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_RECORD_ID"/>
+            </column>
+            <column name="RECORD_ID" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="UNQ_RECORD_ID"/>
+            </column>
+            <column name="START_DATE" type="DATETIME"/>
+            <column name="END_DATE" type="DATETIME"/>
+            <column name="IS_DELETED" type="BIT(1)"/>
+            <column name="CREATED_DATE" type="DATETIME"/>
+            <column name="UPDATED_DATE" type="DATETIME"/>
+            <column name="OWNER_FK" type="BIGINT"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="OWNER_FK" baseTableName="RECORD"
+                                 constraintName="FK_RECORD_OWNER"
+                                 referencedColumnNames="ID" referencedTableName="OWNER" validate="true"/>
+    </changeSet>
+
+</databaseChangeLog>

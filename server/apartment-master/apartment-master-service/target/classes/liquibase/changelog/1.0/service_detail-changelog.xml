@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="21110778@student.hcmute.edu.vn" id="SERVICE_DETAIL-V1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="SERVICE_DETAIL"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="SERVICE_DETAIL">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_SERVICE_DETAIL_ID"/>
+            </column>
+            <column name="SERVICE_DETAIL_ID" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="UNQ_SERVICE_DETAIL_ID"/>
+            </column>
+            <column name="AMOUNT_OF_USING" type="DOUBLE"/>
+            <column name="MONEY" type="DECIMAL(19, 2)"/>
+            <column name="NEW_VALUE" type="DOUBLE"/>
+            <column name="OLD_VALUE" type="DOUBLE"/>
+            <column name="CREATED_DATE" type="datetime" defaultValueComputed="current_timestamp"/>
+            <column name="UPDATED_DATE" type="datetime" defaultValueComputed="current_timestamp"/>
+            <column name="APARTMENT_FK" type="BIGINT"/>
+            <column name="SERVICE_FK" type="BIGINT"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="SERVICE_FK" baseTableName="SERVICE_DETAIL"
+                                 constraintName="FK_SERVICE_DETAIL_SERVICE"
+                                 referencedColumnNames="ID" referencedTableName="SERVICE" validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="APARTMENT_FK" baseTableName="SERVICE_DETAIL"
+                                 constraintName="FK_SERVICE_DETAIL_APARTMENT"
+                                 referencedColumnNames="ID" referencedTableName="APARTMENT" validate="true"/>
+    </changeSet>
+</databaseChangeLog>
